@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="768.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cs211.project.controllers.AccountHubController">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#adaceb" height="697.0" layoutX="103.0" layoutY="71.0" stroke="#545380" strokeType="INSIDE" strokeWidth="0.0" width="921.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#7a7aa1" height="80.0" layoutX="81.0" stroke="#7a7aa1" strokeType="INSIDE" width="943.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#545380" height="768.0" stroke="#545380" strokeType="INSIDE" width="104.0" />
+      <ImageView fitHeight="80.0" fitWidth="80.0" layoutX="12.0" layoutY="655.0">
+         <image>
+            <Image url="@../../../images/setting-account.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="80.0" fitWidth="80.0" layoutX="12.0" layoutY="14.0">
+         <image>
+            <Image url="@../../../images/ticket.png" />
+         </image>
+      </ImageView>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="80.0" layoutX="-4.0" layoutY="655.0" stroke="BLACK" strokeType="INSIDE" width="10.0" />
+      <ImageView fitHeight="80.0" fitWidth="80.0" layoutX="11.0" layoutY="132.0">
+         <image>
+            <Image url="@../../../images/createEvent.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="388.0" layoutY="5.0" text="ACCOUNT HUB" textFill="WHITE">
+         <font>
+            <Font size="48.0" />
+         </font>
+      </Label>
+      <AnchorPane layoutX="14.0" layoutY="14.0" onMouseClicked="#handleGoEventList" prefHeight="80.0" prefWidth="80.0" />
+      <AnchorPane layoutX="14.0" layoutY="132.0" onMouseClicked="#handleGoEventCreator" prefHeight="80.0" prefWidth="80.0" />
+      <AnchorPane layoutX="14.0" layoutY="655.0" onMouseClicked="#handleGoAccountHub" prefHeight="80.0" prefWidth="80.0" />
+      <ImageView fitHeight="200.0" fitWidth="200.0" layoutX="453.0" layoutY="284.0">
+         <image>
+            <Image url="@../../../images/change-password.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="200.0" fitWidth="200.0" layoutX="169.0" layoutY="284.0">
+         <image>
+            <Image url="@../../../images/profile.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="200.0" fitWidth="200.0" layoutX="744.0" layoutY="284.0">
+         <image>
+            <Image url="@../../../images/logout.png" />
+         </image>
+      </ImageView>
+      <AnchorPane layoutX="169.0" layoutY="284.0" onMouseClicked="#handleGoProfile" prefHeight="200.0" prefWidth="200.0" />
+      <AnchorPane layoutX="464.0" layoutY="284.0" onMouseClicked="#handleGoChangePassword" prefHeight="200.0" prefWidth="200.0" />
+      <AnchorPane layoutX="772.0" layoutY="284.0" onMouseClicked="#handleGoWelcome" prefHeight="200.0" prefWidth="200.0" />
+      <Label layoutX="182.0" layoutY="544.0" text="PROFILE" textFill="WHITE">
+         <font>
+            <Font size="48.0" />
+         </font>
+      </Label>
+      <Label layoutX="465.0" layoutY="509.0" text="CHANGE" textFill="WHITE">
+         <font>
+            <Font size="48.0" />
+         </font>
+      </Label>
+      <Label layoutX="432.0" layoutY="579.0" text="PASSWORD" textFill="WHITE">
+         <font>
+            <Font size="48.0" />
+         </font>
+      </Label>
+      <Label layoutX="757.0" layoutY="544.0" text="LOGOUT" textFill="WHITE">
+         <font>
+            <Font size="48.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="768.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cs211.project.controllers.EventListController">
+   <children>
+      <!-- Background Rectangles -->
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#adaceb" height="697.0" layoutX="103.0" layoutY="71.0" stroke="#545380" strokeType="INSIDE" strokeWidth="0.0" width="921.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#7a7aa1" height="80.0" layoutX="81.0" stroke="#7a7aa1" strokeType="INSIDE" width="943.0" />
+
+      <!-- Header Label -->
+      <Label layoutX="485.0" layoutY="5.0" text="EVENT" textFill="WHITE">
+         <font>
+            <Font size="48.0" />
+         </font>
+      </Label>
+
+      <!-- Event Table -->
+      <TableView fx:id="eventsTableView" layoutX="145.0" layoutY="142.0" prefHeight="610.0" prefWidth="843.0">
+         <columns>
+            <TableColumn prefWidth="75.0" text="C1" />
+            <TableColumn prefWidth="75.0" text="C2" />
+         </columns>
+      </TableView>
+
+      <!-- Search TextField and Icon -->
+      <TextField fx:id="searchTextField" layoutX="204.0" layoutY="92.0" prefHeight="39.0" prefWidth="786.0" />
+      <ImageView fitHeight="50.0" fitWidth="50.0" layoutX="145.0" layoutY="87.0">
+         <image>
+            <Image url="@../../../images/searchIcon.png" />
+         </image>
+      </ImageView>
+
+      <!-- Navigation Icons -->
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#545380" height="768.0" stroke="#545380" strokeType="INSIDE" width="104.0" />
+      <ImageView fitHeight="80.0" fitWidth="80.0" layoutX="12.0" layoutY="655.0">
+         <image>
+            <Image url="@../../../images/setting-account.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="80.0" fitWidth="80.0" layoutX="12.0" layoutY="14.0">
+         <image>
+            <Image url="@../../../images/ticket.png" />
+         </image>
+      </ImageView>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="80.0" layoutX="-4.0" layoutY="9.0" stroke="BLACK" strokeType="INSIDE" width="10.0" />
+      <ImageView fitHeight="80.0" fitWidth="80.0" layoutX="11.0" layoutY="132.0">
+         <image>
+            <Image url="@../../../images/createEvent.png" />
+         </image>
+      </ImageView>
+
+      <!-- Navigation Anchors with Event Handlers -->
+      <AnchorPane layoutX="14.0" layoutY="14.0" onMouseClicked="#handleGoEventList" prefHeight="80.0" prefWidth="80.0" />
+      <AnchorPane layoutX="14.0" layoutY="132.0" onMouseClicked="#handleGoEventCreator" prefHeight="80.0" prefWidth="80.0" />
+      <AnchorPane layoutX="14.0" layoutY="655.0" onMouseClicked="#handleGoAccountHub" prefHeight="80.0" prefWidth="80.0" />
+   </children>
+</AnchorPane>

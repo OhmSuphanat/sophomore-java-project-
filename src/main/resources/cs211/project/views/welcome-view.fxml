@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.QuadCurve?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="768.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cs211.project.controllers.WelcomeController">
+   <children>
+      <ImageView fitHeight="768.0" fitWidth="1024.0">
+         <image>
+            <Image url="@../../../images/background.png" />
+         </image>
+      </ImageView>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#545380" height="768.0" opacity="0.8" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="1024.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#adaceb" height="570.0" layoutX="327.0" layoutY="76.0" stroke="#adaceb" strokeType="INSIDE" strokeWidth="0.0" width="370.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#545380" height="325.0" layoutX="327.0" layoutY="226.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="370.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#7a7aa1" height="105.0" layoutX="327.0" layoutY="191.0" stroke="#7a7aa1" strokeType="INSIDE" strokeWidth="0.0" width="370.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#7a7aa1" height="54.0" layoutX="327.0" layoutY="392.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="370.0" />
+      <QuadCurve controlX="22.0" controlY="-43.0" endX="81.0" fill="#7a7aa1" layoutX="377.0" layoutY="193.0" startX="-50.0" stroke="#7a7aa1" strokeType="INSIDE" strokeWidth="0.0" />
+      <QuadCurve controlX="-4.0" controlY="22.0" endX="38.0" fill="#adaceb" layoutX="507.0" layoutY="191.0" startX="-50.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+      <QuadCurve controlX="1.0" controlY="-21.0" endX="38.0" fill="#7a7aa1" layoutX="596.0" layoutY="191.0" startX="-50.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+      <Label layoutX="410.0" layoutY="90.0" text="A EVENT" textFill="WHITE">
+         <font>
+            <Font size="50.0" />
+         </font>
+      </Label>
+      <Label layoutX="351.0" layoutY="252.0" text="Username" textFill="WHITE">
+         <font>
+            <Font size="28.0" />
+         </font>
+      </Label>
+      <TextField fx:id="usernameTextField" layoutX="351.0" layoutY="319.0" prefHeight="25.0" prefWidth="323.0" promptText="Please enter your username">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </TextField>
+      <Label layoutX="428.0" layoutY="566.0" text="SIGN IN" textFill="WHITE">
+         <font>
+            <Font size="48.0" />
+         </font>
+      </Label>
+      <Label layoutX="351.0" layoutY="402.0" text="Password" textFill="WHITE">
+         <font>
+            <Font size="28.0" />
+         </font>
+      </Label>
+      <AnchorPane layoutX="327.0" layoutY="551.0" onMouseClicked="#signIn" prefHeight="95.0" prefWidth="370.0" />
+      <Label layoutX="328.0" layoutY="665.0" text="Need an account?" textFill="#adaceb">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="539.0" layoutY="665.0" text="SIGN UP" textFill="WHITE">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <AnchorPane layoutX="535.0" layoutY="666.0" onMouseClicked="#handleGoSignUp" prefHeight="35.0" prefWidth="100.0" />
+      <Label fx:id="errorLabel" layoutX="351.0" layoutY="218.0" text="errorLabel" textFill="#ffa5a5">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <PasswordField fx:id="passwordPasswordField" layoutX="351.0" layoutY="475.0" prefHeight="39.0" prefWidth="323.0" promptText="Please enter your password">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </PasswordField>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#545380" height="46.0" layoutX="848.0" layoutY="671.0" stroke="WHITE" strokeType="INSIDE" strokeWidth="0.0" width="100.0" />
+      <Label layoutX="868.0" layoutY="683.0" text="CREDIT" textFill="WHITE">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Pane layoutX="847.0" layoutY="670.0" onMouseClicked="#goToCredit" prefHeight="46.0" prefWidth="100.0" />
+      <ImageView fitHeight="80.0" fitWidth="80.0" layoutX="50.0" layoutY="40.0" onMouseClicked="#openPDF">
+         <image>
+            <Image url="@../../../images/handbook.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="768.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cs211.project.controllers.StaffListController">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#545380" height="768.0" layoutX="-9.0" stroke="#545380" strokeType="INSIDE" width="104.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#adaceb" height="697.0" layoutX="103.0" layoutY="71.0" stroke="#545380" strokeType="INSIDE" strokeWidth="0.0" width="921.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#545380" height="47.0" layoutX="252.0" layoutY="80.0" stroke="WHITE" strokeType="INSIDE" width="148.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#adaceb" height="47.0" layoutX="400.0" layoutY="80.0" stroke="WHITE" strokeType="INSIDE" width="128.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#545380" height="47.0" layoutX="104.0" layoutY="80.0" stroke="WHITE" strokeType="INSIDE" width="148.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#545380" height="47.0" layoutX="528.0" layoutY="80.0" stroke="WHITE" strokeType="INSIDE" width="180.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#545380" height="47.0" layoutX="708.0" layoutY="80.0" stroke="WHITE" strokeType="INSIDE" width="154.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#7a7aa1" height="80.0" layoutX="81.0" stroke="#7a7aa1" strokeType="INSIDE" width="943.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#545380" height="768.0" stroke="#545380" strokeType="INSIDE" width="104.0" />
+      <ImageView fitHeight="80.0" fitWidth="80.0" layoutX="12.0" layoutY="655.0">
+         <image>
+            <Image url="@../../../images/setting-account.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="80.0" fitWidth="80.0" layoutX="12.0" layoutY="14.0">
+         <image>
+            <Image url="@../../../images/ticket.png" />
+         </image>
+      </ImageView>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="80.0" layoutX="-4.0" layoutY="655.0" stroke="BLACK" strokeType="INSIDE" width="10.0" />
+      <ImageView fitHeight="80.0" fitWidth="80.0" layoutX="11.0" layoutY="132.0">
+         <image>
+            <Image url="@../../../images/createEvent.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="423.0" layoutY="5.0" text="About Event" textFill="WHITE">
+         <font>
+            <Font size="48.0" />
+         </font>
+      </Label>
+      <AnchorPane layoutX="14.0" layoutY="14.0" onMouseClicked="#handleGoEventList" prefHeight="80.0" prefWidth="80.0" />
+      <AnchorPane layoutX="11.0" layoutY="132.0" onMouseClicked="#handleGoEventCreator" prefHeight="80.0" prefWidth="80.0" />
+      <AnchorPane layoutX="14.0" layoutY="655.0" onMouseClicked="#handleGoAccountHub" prefHeight="80.0" prefWidth="80.0" />
+      <Label layoutX="140.0" layoutY="88.0" text="General" textFill="WHITE">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </Label>
+      <Label layoutX="282.0" layoutY="89.0" text="Schedule" textFill="WHITE">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </Label>
+      <Label layoutX="437.0" layoutY="88.0" text="Team" textFill="WHITE">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </Label>
+      <Label layoutX="544.0" layoutY="88.0" text="Team Schedule" textFill="WHITE">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </Label>
+      <Label layoutX="732.0" layoutY="88.0" text="Chat Team" textFill="WHITE">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </Label>
+      <Label layoutX="211.0" layoutY="138.0" text="CREATE TEAM" textFill="WHITE">
+         <font>
+            <Font size="28.0" />
+         </font>
+      </Label>
+      <Button layoutX="212.0" layoutY="667.0" mnemonicParsing="false" onMouseClicked="#createTeam" prefHeight="40.0" prefWidth="148.0" style="-fx-background-radius: 30;" text="CREATE">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Button>
+      <Pane layoutX="252.0" layoutY="82.0" onMouseClicked="#handleGoScheduleList" prefHeight="47.0" prefWidth="148.0" />
+      <Pane layoutX="103.0" layoutY="76.0" onMouseClicked="#handleGoEventSetting" prefHeight="55.0" prefWidth="148.0" />
+      <Pane layoutX="398.0" layoutY="80.0" onMouseClicked="#handleGoStaffListController" prefHeight="47.0" prefWidth="128.0" />
+      <Pane layoutX="528.0" layoutY="82.0" onMouseClicked="#handleGoTeamSchedule" prefHeight="47.0" prefWidth="180.0" />
+      <Pane layoutX="708.0" layoutY="82.0" onMouseClicked="#handleGoTeamChat" prefHeight="47.0" prefWidth="154.0" />
+      <TableView fx:id="teamsTableView" layoutX="537.0" layoutY="185.0" prefHeight="154.0" prefWidth="450.0">
+        <columns>
+          <TableColumn prefWidth="75.0" text="C1" />
+          <TableColumn prefWidth="75.0" text="C2" />
+        </columns>
+      </TableView>
+      <Label layoutX="119.0" layoutY="186.0" text="Team Name" textFill="WHITE">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <TextField fx:id="teamNameTextField" layoutX="129.0" layoutY="221.0" prefHeight="25.0" prefWidth="280.0" />
+      <Label fx:id="errorTeamNameLabel" layoutX="119.0" layoutY="250.0" text="errorTeamName" textFill="RED" />
+      <Label layoutX="120.0" layoutY="285.0" text="Amount" textFill="WHITE">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <TextField fx:id="amountTextField" layoutX="129.0" layoutY="324.0" prefHeight="25.0" prefWidth="280.0" />
+      <Label fx:id="errorAmountLabel" layoutX="119.0" layoutY="357.0" text="errorAmount" textFill="RED">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="693.0" layoutY="138.0" text="TEAMS" textFill="WHITE">
+         <font>
+            <Font size="28.0" />
+         </font>
+      </Label>
+      <TableView fx:id="staffsTableView" layoutX="539.0" layoutY="395.0" prefHeight="308.0" prefWidth="450.0">
+         <columns>
+            <TableColumn prefWidth="75.0" text="C1" />
+            <TableColumn prefWidth="75.0" text="C2" />
+         </columns>
+      </TableView>
+      <Label layoutX="629.0" layoutY="351.0" text="STAFFS IN TEAM" textFill="WHITE">
+         <font>
+            <Font size="28.0" />
+         </font>
+      </Label>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#545380" height="47.0" layoutX="860.0" layoutY="80.0" stroke="WHITE" strokeType="INSIDE" width="164.0" />
+      <Label layoutX="887.0" layoutY="88.0" text="Participant" textFill="WHITE">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </Label>
+      <Pane layoutX="862.0" layoutY="80.0" onMouseClicked="#handleGoParticipantList" prefHeight="47.0" prefWidth="160.0" />
+      <Button fx:id="banButton" layoutX="589.0" layoutY="716.0" mnemonicParsing="false" onMouseClicked="#banStaff" prefHeight="17.0" prefWidth="118.0" style="-fx-background-radius: 30;" text="BAN" textFill="RED">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Button>
+      <Label layoutX="117.0" layoutY="420.0" text="Joining Date&amp;Time" textFill="WHITE">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="115.0" layoutY="482.0" text="Start" textFill="WHITE">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <DatePicker fx:id="startDatePicker" layoutX="183.0" layoutY="487.0" prefHeight="25.0" prefWidth="160.0" />
+      <Label layoutX="128.0" layoutY="552.0" text="End" textFill="WHITE">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <DatePicker fx:id="endDatePicker" layoutX="183.0" layoutY="557.0" prefHeight="25.0" prefWidth="160.0" />
+      <TextField fx:id="startTimeTextField" layoutX="359.0" layoutY="487.0" prefHeight="25.0" prefWidth="103.0" />
+      <TextField fx:id="endTimeTextField" layoutX="359.0" layoutY="557.0" prefHeight="25.0" prefWidth="103.0" />
+      <Label fx:id="errorDateTimeLabel" layoutX="120.0" layoutY="612.0" text="errorDateTime" textFill="RED">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Button fx:id="promoteButton" layoutX="744.0" layoutY="716.0" mnemonicParsing="false" onMouseClicked="#promoteStaff" prefHeight="39.0" prefWidth="148.0" style="-fx-background-radius: 30;" text="PROMOTE" textFill="#009035">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

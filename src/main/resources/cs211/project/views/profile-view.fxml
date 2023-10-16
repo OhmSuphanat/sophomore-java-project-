@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="768.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cs211.project.controllers.ProfileController">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#adaceb" height="697.0" layoutX="103.0" layoutY="71.0" stroke="#545380" strokeType="INSIDE" strokeWidth="0.0" width="921.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#7a7aa1" height="80.0" layoutX="81.0" stroke="#7a7aa1" strokeType="INSIDE" width="943.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#bebeeb" height="200.0" layoutX="740.0" layoutY="527.0" stroke="WHITE" strokeType="INSIDE" strokeWidth="0.0" width="200.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#bebeeb" height="200.0" layoutX="202.0" layoutY="527.0" stroke="WHITE" strokeType="INSIDE" strokeWidth="0.0" width="200.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#bebeeb" height="200.0" layoutX="470.0" layoutY="527.0" stroke="WHITE" strokeType="INSIDE" strokeWidth="0.0" width="200.0" />
+      <Label layoutX="533.0" layoutY="132.0" text="username" textFill="WHITE">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="533.0" layoutY="272.0" text="display name" textFill="WHITE">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label fx:id="usernameLabel" layoutX="533.0" layoutY="163.0" prefHeight="94.0" prefWidth="480.0" text="usernamelabel" textFill="WHITE">
+         <font>
+            <Font size="48.0" />
+         </font>
+      </Label>
+      <Label fx:id="displayNameLabel" layoutX="533.0" layoutY="302.0" prefHeight="93.0" prefWidth="480.0" text="displaynamelabel" textFill="WHITE">
+         <font>
+            <Font size="48.0" />
+         </font>
+      </Label>
+      <Label fx:id="totalOwnerEventLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="786.0" layoutY="552.0" prefHeight="93.0" prefWidth="108.0" text="0" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font size="64.0" />
+         </font>
+      </Label>
+      <Label layoutX="254.0" layoutY="675.0" text="Complete" textFill="WHITE">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="787.0" layoutY="675.0" text="My Events" textFill="WHITE">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="515.0" layoutY="675.0" text="Scheduled" textFill="WHITE">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#545380" height="768.0" stroke="#545380" strokeType="INSIDE" width="104.0" />
+      <ImageView fitHeight="80.0" fitWidth="80.0" layoutX="12.0" layoutY="655.0">
+         <image>
+            <Image url="@../../../images/setting-account.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="80.0" fitWidth="80.0" layoutX="12.0" layoutY="14.0">
+         <image>
+            <Image url="@../../../images/ticket.png" />
+         </image>
+      </ImageView>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="80.0" layoutX="-4.0" layoutY="655.0" stroke="BLACK" strokeType="INSIDE" width="10.0" />
+      <ImageView fitHeight="80.0" fitWidth="80.0" layoutX="11.0" layoutY="132.0">
+         <image>
+            <Image url="@../../../images/createEvent.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="476.0" layoutY="5.0" text="PROFILE" textFill="WHITE">
+         <font>
+            <Font size="48.0" />
+         </font>
+      </Label>
+      <AnchorPane layoutX="14.0" layoutY="14.0" onMouseClicked="#handleGoEventList" prefHeight="80.0" prefWidth="80.0" />
+      <AnchorPane layoutX="14.0" layoutY="132.0" onMouseClicked="#handleGoEventCreator" prefHeight="80.0" prefWidth="80.0" />
+      <AnchorPane layoutX="14.0" layoutY="655.0" onMouseClicked="#handleGoAccountHub" prefHeight="80.0" prefWidth="80.0" />
+      <Label fx:id="totalDoneLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="212.0" layoutY="552.0" prefHeight="93.0" prefWidth="175.0" text="0" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font size="64.0" />
+         </font>
+      </Label>
+      <Label fx:id="totalJoinLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="516.0" layoutY="552.0" prefHeight="93.0" prefWidth="108.0" text="0" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font size="64.0" />
+         </font>
+      </Label>
+      <Button layoutX="204.0" layoutY="425.0" mnemonicParsing="false" onAction="#handleUploadButton" style="-fx-background-radius: 30;" text="Change Picture">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Button>
+      <Pane layoutX="202.0" layoutY="527.0" onMouseClicked="#showDisableEventList" prefHeight="200.0" prefWidth="200.0" />
+      <Pane layoutX="470.0" layoutY="527.0" onMouseClicked="#showScheduledEventListPopUp" prefHeight="200.0" prefWidth="200.0" />
+      <Pane layoutX="740.0" layoutY="527.0" onMouseClicked="#showYourEventListPopUp" prefHeight="200.0" prefWidth="200.0" />
+      <Circle fx:id="imageCircle" fill="WHITE" layoutX="300.0" layoutY="257.0" radius="123.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+   </children>
+</AnchorPane>
